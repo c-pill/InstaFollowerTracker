@@ -16,12 +16,9 @@ class TrackInstaFollows:
         print("\n========================================")
 
     def login(self):
-        #user = input("Username: ")
         username = input("Username: ")
         password = input("Password: ")
         self.loader.login(username, password)
-        #print("*password doesn't appear when typed")
-        #self.loader.interactive_login(username=user)
         self.profile = instaloader.Profile.from_username(self.loader.context, username=username)
 
     def compareFollowers(self):
